@@ -13,7 +13,7 @@ abstract class MixinLightmapTextureManager {
     /**
      * Mixin needed to allow negative gamma
      */
-    @ModifyExpressionValue(method = "update", at = @At(value = "INVOKE", target = "Ljava/lang/Math;max(FF)F", ordinal = 2))
+    @ModifyExpressionValue(method = "update", at = @At(value = "INVOKE", target = "Ljava/lang/Math;max(FF)F", ordinal = 0))
     private float allowNegativeGamma(float original) {
         float gamma = (float) GammaManager.getGamma();
         if (gamma < 0) {

@@ -6,15 +6,15 @@ import io.github.sjouwer.gammautils.GammaManager;
 import io.github.sjouwer.gammautils.GammaUtils;
 import io.github.sjouwer.gammautils.NightVisionManager;
 import io.github.sjouwer.gammautils.statuseffect.GammaStatusEffect;
-import net.minecraft.client.gui.screen.ingame.AbstractInventoryScreen;
+import net.minecraft.client.gui.screen.ingame.StatusEffectsDisplay;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
-@Mixin(AbstractInventoryScreen.class)
-public class MixinAbstractInventoryScreen {
+@Mixin(StatusEffectsDisplay.class)
+public class MixinStatusEffectsDisplay {
 
     /**
      * Mixin to show the gamma or night vision percentage instead of the StatusEffect duration
